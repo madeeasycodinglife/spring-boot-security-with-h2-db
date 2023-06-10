@@ -1,0 +1,14 @@
+@EnableMethodSecurity(prePostEnabled = true) should be give at the class level of SecurityConfig class
+@PreAuthorize(x) where x is ::
+------------------------------
+    hasRole('ROLE_NAME') - Checks if the authenticated user has the specified role.
+    hasAnyRole('ROLE1', 'ROLE2') - Checks if the authenticated user has any of the specified roles.
+    hasAuthority('AUTHORITY_NAME') - Checks if the authenticated user has the specified authority.
+    hasAnyAuthority('AUTHORITY1', 'AUTHORITY2') - Checks if the authenticated user has any of the specified authorities.
+    principal - Refers to the currently authenticated user.
+    authentication - Refers to the authentication object representing the current user's security context.
+    permitAll() - Allows access to the annotated method or endpoint for all users, regardless of authentication.
+    denyAll() - Denies access to the annotated method or endpoint for all users, regardless of authentication.
+    isAnonymous() - Checks if the current user is anonymous (not authenticated).
+    isAuthenticated() - Checks if the current user is authenticated.
+    isFullyAuthenticated() - Checks if the current user is fully authenticated (not anonymous or a remember-me user).
